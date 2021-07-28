@@ -7,7 +7,7 @@ const map = document.createElement("div")
 map.style.height = "600px"
 map.setAttribute("id", "mapid")
 document.body.appendChild(map)
-const mymap = L.map("mapid").setView([51.505, -0.09], 13)
+const mymap = L.map("mapid").setView([29.75, -95.36], 9)
 
 L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -15,6 +15,7 @@ L.tileLayer(
     attribution:
       'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
+    minZoom: 9,
     id: "mapbox/streets-v11",
     tileSize: 512,
     zoomOffset: -1,
