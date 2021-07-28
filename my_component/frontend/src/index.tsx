@@ -1,6 +1,7 @@
 import { Streamlit } from "./streamlit"
 import * as L from "leaflet"
 import "leaflet/dist/leaflet.css"
+import * as T from "./token.json"
 
 const map = document.createElement("div")
 map.style.height = "600px"
@@ -17,7 +18,7 @@ L.tileLayer(
     id: "mapbox/streets-v11",
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: "use.your.mapbox.token",
+    accessToken: T.MAPBOX_TOKEN,
   }
 ).addTo(mymap)
 
